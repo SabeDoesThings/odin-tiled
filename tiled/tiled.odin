@@ -41,10 +41,15 @@ parse_tileset :: proc(path: string) -> Tileset {
 	ts: Tileset
 	jdata, ok := os.read_entire_file(path)
 	if !ok {
+		fmt.print("Failed to read file: ", path, "\n")
 		return ts
 	}
 
 	err := json.unmarshal(jdata, &ts)
+	if err != nil {
+		fmt.print("Failed to unmarshal JSON: ", err, "\n")
+		return ts
+	}
 	return ts
 }
 
