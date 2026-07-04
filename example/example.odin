@@ -1,21 +1,21 @@
 package main
 
-import tiled "../tiled"
-import rl "vendor:raylib"
-import fmt "core:fmt"
+import "../tiled"
+import "vendor:raylib"
+import "core:fmt"
 
 main :: proc() {
-    rl.InitWindow(320, 480, "Tiled Example")
+    raylib.InitWindow(320, 480, "Tiled Example")
 
     tiled_map := tiled.parse_tilemap("tileMap.json")
 
-    tileset_texture := rl.LoadTexture("tiles.png")
+    tileset_texture := raylib.LoadTexture("tiles.png")
 
-    for !rl.WindowShouldClose() {
-        rl.BeginDrawing()
-        rl.ClearBackground(rl.BLACK)
+    for !raylib.WindowShouldClose() {
+        raylib.BeginDrawing()
+        raylib.ClearBackground(raylib.BLACK)
         draw_map(tiled_map, tileset_texture)
-        rl.EndDrawing()
+        raylib.EndDrawing()
     }
 }
 
