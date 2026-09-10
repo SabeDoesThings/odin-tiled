@@ -1,3 +1,8 @@
+> [!WARNING]
+> This repository is archived. I appreciate the pull requests submitted but honestly I don't even have the project files anymore so I can't even really work on.
+> If you wanna fork it and work on it yourself you are more than welcome.
+> I appreciate the support I've gotten so far.
+
 # odin-tiled
 A simple [Tiled](https://www.mapeditor.org) map loader. Uses Odin's `core:json` to unmarshal data into structs.
 
